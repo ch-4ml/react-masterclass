@@ -1,0 +1,44 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2022, // 최신 문법 지원
+    "sourceType": "module", // 모듈 시스템 사용시
+    "ecmaFeatures": {
+      "jsx": true // react jsx parsing
+    }
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": ["airbnb", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "rules": {
+    "react/require-default-props": "warn",
+    "react/jsx-props-no-spreading": "warn",
+    "react/no-array-index-key": "warn",
+    "react/jsx-no-useless-fragment": "warn",
+    "import/prefer-default-export": "warn",
+    "jsx-a11y/anchor-is-valid": "warn",
+    "no-bitwise": "off",
+    "no-use-before-define": "off",
+    "import/no-unresolved": "off",
+    "react/function-component-definition": "off",
+    "no-shadow": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "no-unused-vars": "off",
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+    "import/extensions": [
+      "error",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "json": "ignorePackages"
+      }
+    ]
+  }
+}
